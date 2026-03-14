@@ -133,6 +133,132 @@
       margin-top: 8px;
     }
 
+    .card {
+      position: relative;
+    }
+
+    .badge-new {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #00b1c1;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Wall of Love */
+    .wall {
+      columns: 1;
+      column-gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 480px) {
+      .wall {
+        columns: 2;
+      }
+    }
+
+    .wall .video-facade img,
+    .wall > img,
+    .wall > video {
+      width: 100%;
+      border: 1px solid #d1d9e0;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .wall .video-facade {
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 16px;
+      break-inside: avoid;
+    }
+
+    .wall .video-facade img {
+      margin-bottom: 0;
+    }
+
+    .wall .video-facade::after {
+      content: "\25B6";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(0,0,0,0.6);
+      pointer-events: none;
+    }
+
+    /* Testimonial card */
+    .testimonial {
+      position: relative;
+      border: 1px solid #d1d9e0;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 16px;
+      break-inside: avoid;
+      font-size: 13px;
+    }
+
+    .testimonial-source {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 18px;
+      height: 18px;
+    }
+
+    .testimonial-header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid #d1d9e0;
+      margin-bottom: 0;
+    }
+
+    .testimonial-info {
+      min-width: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1.3;
+      color: #1f2328;
+    }
+
+    .testimonial-title {
+      font-size: 11px;
+      color: #59636e;
+      line-height: 1.3;
+    }
+
+    .testimonial-text {
+      color: #1f2328;
+      line-height: 1.5;
+    }
+
+    .testimonial-text p + p {
+      margin-top: 8px;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -151,15 +277,14 @@
       <img class="avatar" src="duccio-armenise.png" alt="Duccio Armenise">
       <h1 class="name">Duccio Armenise</h1>
       <p class="bio">
-        Indie developer building <a href="https://corsidia.com">Corsidia</a> and <a href="https://ucv.jobs">uCV</a>,<br>
-        Investor/mentor at <a href="https://esmerise.com">Esmerise</a>.
+        Mentoring indie devs like I was paid.
       </p>
     </section>
 
     <nav class="links">
-      <a href="https://x.com/DuccioArmenise">𝕏</a>
-      <a href="https://youtube.com/@IndieDuccio">YouTube</a>
       <a href="https://github.com/duarme">GitHub</a>
+      <a href="https://youtube.com/@IndieDuccio">YouTube</a>
+      <a href="https://x.com/DuccioArmenise">𝕏</a>
       <a href="https://linkedin.com/in/duccioarmenise">LinkedIn</a>
       <a href="https://duccio.ucv.jobs">uCV</a>
     </nav>
@@ -167,26 +292,166 @@
     <h2 class="section-heading">Projects</h2>
     <div class="portfolio">
       <div class="card">
-        <div class="card-name"><a href="https://ucv.jobs">uCV</a></div>
-        <p class="card-desc">A uniquely-smart CV (Resume) for your career.</p>
+        <div class="card-name"><a href="https://corsidia.com">Corsidia</a></div>
+        <p class="card-desc">Find only the best training courses in Italy.</p>
       </div>
       <div class="card">
-        <div class="card-name"><a href="https://corsidia.com">Corsidia</a></div>
-        <p class="card-desc">Find the best courses near you.</p>
+        <div class="card-name"><a href="https://ucv.jobs">uCV</a></div>
+        <p class="card-desc">A uniquely-smart CV (resume) for your career.</p>
       </div>
       <div class="card">
         <div class="card-name"><a href="https://esmerise.com">Esmerise</a></div>
-        <p class="card-desc">A better way to learn online.</p>
+        <p class="card-desc">[Investor/Mentor] The best way to create extraordinary online courses.</p>
       </div>
       <div class="card">
-        <div class="card-name"><a href="https://x.com/DuccioArmenise">𝕏Mentor</a></div>
-        <p class="card-desc">Mentoring indie devs on 𝕏 as if I was paid.</p>
+        <span class="badge-new">new</span>
+        <div class="card-name"><a href="https://x.com/DuccioArmenise">𝕏-Mentor</a></div>
+        <p class="card-desc">
+          Writing a book while helping indie devs on 𝕏 as if I were paid.
+        </p>
       </div>
     </div>
 
+    <h2 class="section-heading">Wall of Love</h2>
+    <div class="wall">
+      <div class="video-facade" data-src="wol/lara.mp4">
+        <img src="wol/lara.jpg" alt="Testimonial from Lara" loading="lazy">
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/lara-in.jpeg" alt="Lara Donadello" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Lara Donadello</div>
+            <div class="testimonial-title">Founder and Content Creator at EnBooo and Inglese con Lara</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>Duccio is an incredibly talented individual with a real knack for helping others. He has proven extremely supportive of me and my projects throughout these past years.</p>
+          <p>He was by my side during the launch of my passion project and played a crucial role in coming up with a marketing strategy that really made a difference.</p>
+          <p>Despite having a very logical and rational approach to things, Duccio has no issue thinking outside the box when needed.</p>
+          <p>He's a great mentor who will go at great lengths to give his input and support.</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/leo-in.jpeg" alt="Leonardo Paglia" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Leonardo Paglia</div>
+            <div class="testimonial-title">Founder at <b>Esmerise</b></div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>Working with Duccio is a special experience for three reasons:</p>
+          <p>- His impeccable integrity.<br>
+          - His passion and devotion to work.<br>
+          - His calm, brilliant, and extremely rational modus operandi.</p>
+          <p>Three qualities that are rare on their own, and extraordinary when all found in the same person :)</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/valerio-in.jpeg" alt="Valerio Calcaterra" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Valerio Calcaterra</div>
+            <div class="testimonial-title">Account Manager, Digital Marketing Consultant at Corsidia</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>I've been working with Duccio for over 5 years and we've collaborated on several projects, including Corsidia, on which we've worked together since the very beginning.</p>
+          <p>He's an excellent manager, always focused on results without losing sight of the overall vision and this allows him to coordinate his partners and collaborators work very efficiently. Thanks to his fairness and empathy, he is a good motivator, who instills confidence in the people he works with.</p>
+          <p>In summary, Duccio's leadership qualities and interpersonal skills make him an invaluable asset to any project and it's a pleasure for me to continue working with him.</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/villani-in.jpeg" alt="Valerio Villani" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Valerio Villani</div>
+            <div class="testimonial-title">Co-founder uCV.online | Career Mentor & Coach | Content creator</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>When you embark on an entrepreneurial journey, especially on your own (as in my case), after many struggles I managed to identify 3 truly important things. The ones that make the difference between success and failure.</p>
+          <p>1. Setting priorities. 2. Role models to follow (both general and business-related). 3. A shoulder to complain on (the importance of venting is always too underestimated).</p>
+          <p>I never thought I'd find all three in a single person: Duccio Armenise. A mentor par excellence.</p>
+          <p>Duccio's contribution to developing my decision-making skills and my ability to overcome challenges has been decisive in all my endeavours.</p>
+          <p>Please don't take too much of his time — I need him.</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/vishal-in.jpeg" alt="Vishal Garg" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Vishal Garg</div>
+            <div class="testimonial-title">CTO | Kickcall AI</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>I am impressed by Duccio's ability to handle any situation calmly and he understands both sides of the coin to better judge. I went into many discussions where we kept our points, argued, and come to conclusion after knowing all pros and cons. Every conversation that I had with him was very fruitful.</p>
+          <p>He has a very good understanding of programming, business knowledge & how to make good Italian Pizza :). I will continue working with him and near in the future will walk/run on the road for the same destination.</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/antonella-in.jpeg" alt="Antonella Ierardi" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Antonella Ierardi</div>
+            <div class="testimonial-title">B2B Marketing & Communication at Hydac Spa - Italy</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>Duccio's professionalism stands out for his innate passion for the web.</p>
+          <p>We collaborated on giving a new look to an event page, achieving excellent results in terms of visibility. A remarkable makeover made possible by his ability to build teams and stay up to date with the latest technology.</p>
+          <p>Besides being receptive and innovative, Duccio has a healthy tendency toward continuous learning and the democratization of knowledge — a reliable and rare partner.</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/federico-in.jpeg" alt="Federico Marte" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Federico Marte</div>
+            <div class="testimonial-title">Marketing Consultant | Digital Strategy | Advertising</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>Duccio was my boss and tutor during my internship in WorldBridge. He always helped and guided me with every activity and task.</p>
+          <p>Really notable his organizing skills and his wide knowledge about the Web, in particular: coding, digital marketing and strategic planning. Noteworthy his integrity and his teamwork and communication soft skills.</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <div class="testimonial-header">
+          <img class="testimonial-avatar" src="wol/himanshi-in.jpeg" alt="Himanshi Nagpal" loading="lazy">
+          <div class="testimonial-info">
+            <div class="testimonial-name">Himanshi Nagpal</div>
+            <div class="testimonial-title">ROR Developer</div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>I had the opportunity to work with Duccio on development of Corsidia. Apart from being technically good, he gives emphasis to details. He is innovative, organized as well as helpful and is always open to ideas and suggestions. He has made me improve my programming and organizational skills. Gem of a person to work with!</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.video-facade').forEach(function(el) {
+        el.addEventListener('click', function() {
+          var v = document.createElement('video');
+          v.src = el.dataset.src;
+          v.controls = true;
+          v.autoplay = true;
+          v.playsInline = true;
+          el.replaceWith(v);
+        }, {once: true});
+      });
+    </script>
     <footer>duccio.org</footer>
-
   </main>
 </body>
-
 </html>
