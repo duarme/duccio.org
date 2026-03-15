@@ -61,7 +61,7 @@
       margin-bottom: 4px;
     }
 
-    .bio {
+    .tagline {
       font-size: 16px;
       color: #59636e;
       max-width: 480px;
@@ -124,6 +124,26 @@
       border: 1px solid #d1d9e0;
       border-radius: 6px;
       padding: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .card-logo {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+      margin-top: 2px;
+    }
+
+    .card:hover .card-logo {
+      transform: scale(1.15);
+    }
+
+    .card-content {
+      min-width: 0;
     }
 
     .card-name a {
@@ -138,10 +158,6 @@
     .card-desc {
       color: #59636e;
       margin-top: 8px;
-    }
-
-    .card {
-      position: relative;
     }
 
     /* Wall of Love */
@@ -223,6 +239,11 @@
       flex-shrink: 0;
       border: 1px solid #d1d9e0;
       margin-bottom: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .testimonial:hover .testimonial-avatar {
+      transform: scale(1.15);
     }
 
     .testimonial-info {
@@ -272,8 +293,8 @@
     <section class="profile">
       <img class="avatar" src="duccio-armenise.png" alt="Duccio Armenise">
       <h1 class="name">Duccio Armenise</h1>
-      <p class="bio">
-        Hard to pronounce, easy to work with.
+      <p class="tagline">
+        Building helpful things, helping others do the same.
       </p>
     </section>
 
@@ -288,41 +309,53 @@
     <h2 class="section-heading">Bio</h2>
     <p class="bio-text">
       Indie founder since 2015, but not part of the "just ship it" crowd. Laid off on New Year's Eve, with rent and bills to pay. Couldn't afford to ship 20 projects and pray. The first one had to work. It did, and it changed everything.
-      Today I <a href="https://trustmrr.com/founder/duccioarmenise" rel="nofollow noopener noreferrer" target="_blank">earn</a> more than my former boss, but way more importantly, I escaped the "hamster wheel". My work is about building helpful things; my passion is helping others do the same.
+      Today I <a href="https://trustmrr.com/founder/duccioarmenise" rel="nofollow noopener noreferrer" target="_blank">earn</a> more than my former boss, but way more importantly, I escaped the "hamster wheel". My work is building helpful things; my passion is helping others do the same.
     </p>
 
     <h2 class="section-heading">Work</h2>
     <div class="portfolio">
       <div class="card">
-        <div class="card-name"><a href="https://corsidia.com"><strong>Corsidia</strong></a> founder</div>
-        <p class="card-desc">Find only the best training courses in Italy.</p>
+        <img class="card-logo" src="images/corsidia-icon.svg" alt="Corsidia logo" loading="lazy">
+        <div class="card-content">
+          <div class="card-name"><a href="https://corsidia.com"><strong>Corsidia</strong></a> founder</div>
+          <p class="card-desc">Find only the best training courses in Italy.</p>
+        </div>
       </div>
       <div class="card">
-        <div class="card-name"><a href="https://ucv.jobs"><strong>uCV</strong></a> co-founder</div>
-        <p class="card-desc">A <b>u</b>nique <b>CV</b> for your career.</p>
+        <img class="card-logo" src="images/ucv-icon.svg" alt="uCV logo" loading="lazy">
+        <div class="card-content">
+          <div class="card-name"><a href="https://ucv.jobs"><strong>uCV</strong></a> co-founder</div>
+          <p class="card-desc">A <b>u</b>nique <b>CV</b> for your career.</p>
+        </div>
       </div>
       <div class="card">
-        <div class="card-name"><a href="https://esmerise.com"><strong>Esmerise</strong></a> investor/mentor</div>
-        <p class="card-desc"> The best way to create extraordinary online courses. With gamification and app included.</p>
+        <img class="card-logo" src="images/esmerise-icon.png" alt="Esmerise logo" loading="lazy">
+        <div class="card-content">
+          <div class="card-name"><a href="https://esmerise.com"><strong>Esmerise</strong></a> investor/mentor</div>
+          <p class="card-desc"> The best way to create extraordinary online courses. With gamification and app included.</p>
+        </div>
       </div>
       <div class="card">
-        <div class="card-name"><a href="https://x.com/DuccioArmenise"><strong>𝕏-Mentor</strong></a> maniac</div>
-        <p class="card-desc">
-          Mentoring indie devs like I was paid.<br/>
-          (While writing a book about it)
-        </p>
+        <img class="card-logo" src="images/x-icon.svg" alt="X logo" loading="lazy">
+        <div class="card-content">
+          <div class="card-name"><a href="https://x.com/DuccioArmenise"><strong>𝕏-Mentor</strong></a> maniac</div>
+          <p class="card-desc">
+            Mentoring indie devs like I was paid.<br/>
+            (While writing a book about it)
+          </p>
+        </div>
       </div>
     </div>
 
     <h2 class="section-heading">Wall of Love</h2>
     <div class="wall">
-      <div class="video-facade" data-src="wol/lara.mp4">
-        <img src="wol/lara.jpg" alt="Testimonial from Lara" loading="lazy">
+      <div class="video-facade" data-src="images/lara.mp4">
+        <img src="images/lara.jpg" alt="Testimonial from Lara" loading="lazy">
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/lara-in.jpeg" alt="Lara Donadello" loading="lazy">
+          <img class="testimonial-avatar" src="images/lara-in.jpeg" alt="Lara Donadello" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Lara Donadello</div>
             <div class="testimonial-title">Founder and Content Creator at EnBooo and Inglese con Lara</div>
@@ -339,9 +372,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/leo-in.jpeg" alt="Leonardo Paglia" loading="lazy">
+          <img class="testimonial-avatar" src="images/leo-in.jpeg" alt="Leonardo Paglia" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Leonardo Paglia</div>
             <div class="testimonial-title">Founder at <b>Esmerise</b></div>
@@ -358,9 +391,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/valerio-in.jpeg" alt="Valerio Calcaterra" loading="lazy">
+          <img class="testimonial-avatar" src="images/valerio-in.jpeg" alt="Valerio Calcaterra" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Valerio Calcaterra</div>
             <div class="testimonial-title">Account Manager, Digital Marketing Consultant at Corsidia</div>
@@ -377,9 +410,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/villani-in.jpeg" alt="Valerio Villani" loading="lazy">
+          <img class="testimonial-avatar" src="images/villani-in.jpeg" alt="Valerio Villani" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Valerio Villani</div>
             <div class="testimonial-title">Co-founder uCV.online | Career Mentor & Coach | Content creator</div>
@@ -401,9 +434,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/vishal-in.jpeg" alt="Vishal Garg" loading="lazy">
+          <img class="testimonial-avatar" src="images/vishal-in.jpeg" alt="Vishal Garg" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Vishal Garg</div>
             <div class="testimonial-title">CTO | Kickcall AI</div>
@@ -419,9 +452,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/antonella-in.jpeg" alt="Antonella Ierardi" loading="lazy">
+          <img class="testimonial-avatar" src="images/antonella-in.jpeg" alt="Antonella Ierardi" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Antonella Ierardi</div>
             <div class="testimonial-title">B2B Marketing & Communication at Hydac Spa - Italy</div>
@@ -437,9 +470,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/federico-in.jpeg" alt="Federico Marte" loading="lazy">
+          <img class="testimonial-avatar" src="images/federico-in.jpeg" alt="Federico Marte" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Federico Marte</div>
             <div class="testimonial-title">Marketing Consultant | Digital Strategy | Advertising</div>
@@ -454,9 +487,9 @@
         </div>
       </div>
       <div class="testimonial">
-        <img class="testimonial-source" src="wol/linkedin.svg" alt="LinkedIn">
+        <img class="testimonial-source" src="images/linkedin.svg" alt="LinkedIn">
         <div class="testimonial-header">
-          <img class="testimonial-avatar" src="wol/himanshi-in.jpeg" alt="Himanshi Nagpal" loading="lazy">
+          <img class="testimonial-avatar" src="images/himanshi-in.jpeg" alt="Himanshi Nagpal" loading="lazy">
           <div class="testimonial-info">
             <div class="testimonial-name">Himanshi Nagpal</div>
             <div class="testimonial-title">ROR Developer</div>
