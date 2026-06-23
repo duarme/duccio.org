@@ -134,9 +134,15 @@
     /* Portfolio cards */
     .portfolio {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 16px;
       margin-bottom: 40px;
+    }
+
+    @media (min-width: 480px) {
+      .portfolio {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .card {
@@ -181,9 +187,15 @@
 
     /* Wall of Love */
     .wall {
-      columns: 2;
+      columns: 1;
       column-gap: 16px;
       margin-bottom: 40px;
+    }
+
+    @media (min-width: 480px) {
+      .wall {
+        columns: 2;
+      }
     }
 
     .wall .video-facade img,
